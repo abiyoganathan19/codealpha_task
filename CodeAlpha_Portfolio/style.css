@@ -1,0 +1,23 @@
+body {
+    background: #0f172a;
+    color: #e5e7eb;
+}
+nav {
+    background: #020617;
+}
+section {
+    background: #020617;
+    margin: 20px;
+    border-radius: 15px;
+}
+h1, h2, h3 {
+    color: #38bdf8;
+}
+footer {
+    background: #020617;
+}
+section, .project-card, form {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+}

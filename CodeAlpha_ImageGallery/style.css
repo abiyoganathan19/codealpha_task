@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    margin: 0;
+}
+h1 {
+    margin: 20px 0;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+#lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(18, 2, 2, 0.8);
+}
+#lightbox-img {
+    margin-top: 10%;
+    width: 60%;
+    border-radius: 10px;
+}
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 35px;
+    color: white;
+    cursor: pointer;
+}
+.nav {
+    position: absolute;
+    top: 50%;
+    font-size: 30px;
+    background: rgba(255,255,255,0.7);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+@media (max-width: 600px) {
+    #lightbox-img {
+        width: 90%;
+    }
+
+    .nav {
+        font-size: 24px;
+        padding: 6px;
+    }
+}
+@media (max-width: 900px) {
+    #lightbox-img {
+        width: 75%;
+    }
+}
+.filters {
+    margin-bottom: 20px;
+}
+
+.filters button {
+    padding: 8px 15px;
+    margin: 5px;
+    border: none;
+    background-color: #230505;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.filters button:hover {
+    background-color: #b51297;
+}
+
